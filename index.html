@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,7 +30,7 @@
     <![endif]-->
 </head>
 <body id="minimos-1">
-    <canvas id="drifter"></canvas>
+    <!--<canvas id="particles-js"></canvas>-->
     <div class="preloader abs-center">
         <div class="spinner"></div>
     </div>
@@ -36,200 +38,270 @@
         <div class="v-center">
             <div class="main-content">
                 <p>
-                    Hello, my name is Adam. I like to develop web applications.
+                    Hello, my name is Adam. I develop web applications.
                     Here is <a class="portfolio-link">my portfolio</a>.
                 </p>
                 <ul>
                     <li><a href="https://stackoverflow.com/users/6664613/adam-hari" class="stackoverflow-link" target="_blank">Stack Overflow</a></li>
                     <li><a href="http://bitbucket.org/adamhari" target="_blank">Bitbucket</a></li>
-                    <li><a href="mailto:ahari242@mtroyal.ca" class="contact-link">Contact</a></li>
+                    <li><a href="mailto:ahari242@mtroyal.ca" class="contact-link" title="email: ahari242@mtroyal.ca">Contact</a></li>
                 </ul>
             </div>
+
+
 
             <div class="portfolio-content">
 
                 <div class="projects-container">
-                    <div class="project project-monitor">
-                        <div class="row">
-                            <h3 class="col-xs-12 project-title">
-                                Monitor
-                            </h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="http://adamhari.xyz/app" target="_blank">
-                                    <img src="images/mockup-monitor.png"
+
+
+
+                    <a href="http://createkitchen.azurewebsites.net" target="_blank">
+                        <div class="project project-monitor">
+                            <div class="row">
+                                <h3 class="col-xs-12 project-title">
+                                    Create Kitchen
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img data-src="images/mockup-create.png"
                                          class="project-mockup" />
-                                </a>
-                            </div>
-                            <div class="col-sm-5 project-description">
-                                <p>
-                                    Monitor a web page for changes.
-                                </p>
+                                </div>
+                                <div class="col-sm-5 project-description">
+                                    <p>
+                                        Facilitates creating, invoicing, and handling payment for bookings in a commercial kitchen space. 
+                                    </p>
 
-                                <p>
-                                    Screenshots a provided URL every couple of seconds, comparing with the last shot.
-                                </p>
+                                    <p>
+                                        Hosted as an Azure App Service, utilizing the built-in scheduling functions for periodic data processing.
+                                    </p>
 
-                                <p>
-                                    When changes are detected, the page will open in your browser.
-                                </p>
+                                    <p>
+                                        ASP.NET MVC 5, C#, Entity Framework, ASP.NET Identity, FullCalendar, Stripe, jQuery, jQueryUI, Intro.js, Bootstrap, Lazy.js
+                                    </p>
 
-                                <p>Node.js, Express, Socket.io, PageMonitor, BodyParser, jQuery</p>
 
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 project-link">
-                                <a href="http://adamhari.xyz/app" target="_blank">
-                                    <span class="glyphicon glyphicon-link project-link-icon" aria-hidden="true"></span>
 
-                                </a>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
 
-                    <div class="project project-draw">
-                        <div class="row">
-                            <h3 class="col-xs-12 project-title">
-                                Draw
-                            </h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="https://codepen.io/adamhari/full/BdzVzN/" target="_blank">
-                                    <img src="images/mockup-draw.png"
+
+
+                    <a href="http://www.yycida.ca" target="_blank">
+                        <div class="project project-monitor">
+                            <div class="row">
+                                <h3 class="col-xs-12 project-title">
+                                    CIDA
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img data-src="images/mockup-cida.png"
                                          class="project-mockup" />
-                                </a>
-                            </div>
-                            <div class="col-sm-5 project-description">
-                                <p>
-                                    For drawing pixel art in the browser.
-                                </p>
+                                </div>
+                                <div class="col-sm-5 project-description">
+                                    <p>
+                                        Simple website for a local dumptrucking association.
+                                    </p>
 
-                                <p>
-                                    Provides controls for changing block color, block count, border color, and border size.
-                                </p>
+                                    <p>
+                                        Goal was to repurpose a free HTML theme in order to rapidly develop a clean, professional image for this business.
+                                    </p>
 
-                                <p>
-                                    Responsive design suitable for large and small displays.
-                                </p>
+                                    <p>
+                                        HTML, jQuery, and SCSS. Graphics created in Adobe Illustrator CC 2015.
+                                    </p>
 
-                                <p>
-                                    React, JSX, ES6
-                                </p>
 
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 project-link">
-                                <a href="https://codepen.io/adamhari/full/BdzVzN/" target="_blank">
-                                    <span class="glyphicon glyphicon-link project-link-icon" aria-hidden="true"></span>
 
-                                </a>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
 
 
 
 
-                    <div class="project project-palette-jack">
-                        <div class="row">
-                            <h3 class="col-xs-12 project-title">
-                                Palette Jack
-                            </h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="https://bitbucket.org/adamhari/palette-jack" target="_blank">
-                                    <img src="images/mockup-palette-jack.png"
+
+
+
+
+
+
+                    <a href="http://adamhari.xyz/app" target="_blank">
+                        <div class="project project-monitor">
+                            <div class="row">
+                                <h3 class="col-xs-12 project-title">
+                                    Monitor
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img data-src="images/mockup-monitor.png"
                                          class="project-mockup" />
-                                </a>
-                            </div>
-                            <div class="col-sm-5 project-description">
-                                <p>
-                                    Generates a color palette based on a given URLs CSS rules.
-                                </p>
+                                </div>
+                                <div class="col-sm-5 project-description">
+                                    <p>
+                                        Monitor a web page for changes.
+                                    </p>
 
-                                <p>
-                                    Parses css files, storing rules which relate to color. 
-                                    Color values are quantified and displayed in order based on frequency of occurrence.
-                                </p>
+                                    <p>
+                                        Screenshots a provided URL every couple of seconds, comparing with the last shot.
+                                    </p>
 
-                                <p>
-                                    Rules are ignored if their selector uses certain keywords such as 'error' or 'warning'.
-                                </p>
+                                    <p>
+                                        When changes are detected, the page will open in your browser.
+                                    </p>
 
-                                <p>
-                                    ASP.NET MVC, HTMLAgilityPack, ExCSS, jQuery, jQueryUI, SC Color, Bootstrap
-                                </p>
+                                    <p>
+                                        Node.js, Express, Socket.io, PageMonitor, BodyParser, jQuery
+                                    </p>
 
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 project-link">
-                                <a href="https://bitbucket.org/adamhari/palette-jack" target="_blank">
-                                    <span class="glyphicon glyphicon-link project-link-icon" aria-hidden="true"></span>
+                                    <p>
+                                        Not currently hosting. Can be demo'd on request
+                                    </p>
 
-                                </a>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
 
+                    <a href="https://codepen.io/adamhari/full/BdzVzN/" target="_blank">
+                        <div class="project project-draw">
+                            <div class="row">
+                                <h3 class="col-xs-12 project-title">
+                                    Draw
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
 
-                    <div class="project project-tractor">
-                        <div class="row">
-                            <h3 class="col-xs-12 project-title">
-                                Tractor
-                            </h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="https://bitbucket.org/adamhari/tractor" target="_blank">
-                                    <img src="images/mockup-tractor.png"
+                                    <img data-src="images/mockup-draw.png"
                                          class="project-mockup" />
-                                </a>
-                            </div>
-                            <div class="col-sm-5 project-description">
-                                <p>
-                                    Chrome extension for bulk-downloading files from a web page.
-                                </p>
+                                </div>
+                                <div class="col-sm-5 project-description">
+                                    <p>
+                                        For drawing pixel art in the browser.
+                                    </p>
 
-                                <p>
-                                    Will queue up downloads based on parameters such as file name, extension, and size.
-                                </p>
+                                    <p>
+                                        Provides controls for changing block color, block count, border color, and border size.
+                                    </p>
 
-                                <p>
-                                    Options for controlling download rate and file naming scheme.
-                                </p>
+                                    <p>
+                                        Responsive design suitable for large and small displays.
+                                    </p>
 
-                                <p>FileSaver.js, Baffle.js, jQuery, jQueryUI, Bootstrap</p>
+                                    <p>
+                                        Designed with the intent of gaining a better understanding of React and JSX syntax.
+                                    </p>
 
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 project-link">
-                                <a href="https://bitbucket.org/adamhari/tractor" target="_blank">
-                                    <span class="glyphicon glyphicon-link project-link-icon" aria-hidden="true"></span>
+                                    <p>
+                                        React, JSX, ES6
+                                    </p>
 
-                                </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
 
 
+
+                    <a href="https://bitbucket.org/adamhari/palette-jack" target="_blank">
+                        <div class="project project-palette-jack">
+                            <div class="row">
+                                <h3 class="col-xs-12 project-title">
+                                    Palette Jack
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img data-src="images/mockup-palette-jack.png"
+                                         class="project-mockup" />
+                                </div>
+                                <div class="col-sm-5 project-description">
+                                    <p>
+                                        Generates a color palette based on a given URLs CSS rules.
+                                    </p>
+
+                                    <p>
+                                        Color values are quantified and displayed in order based on frequency of occurrence.
+                                    </p>
+
+                                    <p>
+                                        Developed to identify and analyze color theory implementations in popular web pages.
+                                    </p>
+
+                                    <p>
+                                        ASP.NET MVC, HTMLAgilityPack, ExCSS, jQuery, jQueryUI, SC Color, Bootstrap
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="https://bitbucket.org/adamhari/tractor" target="_blank">
+                        <div class="project project-tractor">
+                            <div class="row">
+                                <h3 class="col-xs-12 project-title">
+                                    Tractor
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img data-src="images/mockup-tractor.png"
+                                         class="project-mockup" />
+                                </div>
+                                <div class="col-sm-5 project-description">
+                                    <p>
+                                        Chrome extension for bulk-downloading files from a web page.
+                                    </p>
+
+                                    <p>
+                                        Will queue up downloads based on parameters such as file name, extension, and size.
+                                    </p>
+
+                                    <p>
+                                        Designed for personal use. I was interested in efficiently scraping audio files from web pages.
+                                    </p>
+
+                                    <p>FileSaver.js, Baffle.js, jQuery, jQueryUI, Bootstrap</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
                 </div>
+
+
+                <a href="/" class="portfolio-home-button">
+                    <span>HOME</span>
+                </a>
+
+
             </div>
         </div>
 
 
     </div>
+
+
+    </div>
+
+
 
     <!-- =================================================================
     COMPILED JS PLUGINS
@@ -237,13 +309,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
     <script src="js/dependencies.js"></script>
-    <script src="js/backgrounds/drifter.min.js"></script>
     <script src="js/main.js"></script>
 
     <script type="text/javascript">
 
         $(function () {
+
+            $('.project-mockup').lazy();
+
+            $('.portfolio-link').css("opacity", 0);
 
             setTimeout(function () {
                 $('.portfolio-link').css("opacity", 1);
@@ -261,13 +337,13 @@
 
                 setTimeout(function () {
                     $(".content-wrapper").css("overflow-y", "auto");
-                }, 900);
+                }, 1200);
 
 
             });
         });
 
-        
+
     </script>
 
 

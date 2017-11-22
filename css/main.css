@@ -196,7 +196,6 @@ body {
 }
 
 .main-content p a{
-    opacity:0;
 }
 
 
@@ -260,12 +259,8 @@ li a:after {
     transition: opacity 0.5s;
 }
 
-.stackoverflow-link:after{
-    background-color: #EC6000;
-}
-
-.contact-link:after{
-    background-color: #5DDC22;
+li a:focus{
+    color: #A3A3A3;
 }
 
 li a:hover {
@@ -275,6 +270,8 @@ li a:hover {
 li a:hover:after {
     opacity: 1;
 }
+
+
 
 a.btn-fill, a.btn-bordered {
     padding: 0.5em 1em;
@@ -313,23 +310,7 @@ a.btn-bordered {
     overflow:hidden;
 }
 
-.portfolio-link{
-    cursor:pointer;
-}
 
-.portfolio-link div{
-    -moz-transition: 0.15s all linear;
-    -ms-transition: 0.15s all linear;
-    -o-transition: 0.15s all linear;
-    -webkit-transition: 0.15s all linear;
-    transition: 0.15s all linear;
-
-    color: #008CEC;
-}
-
-.portfolio-link:hover div{
-    color: #005FA0 !important;
-}
 
 /* 3.2 Preloader Spinner
 https://codepen.io/glosie/pen/GgqBXR
@@ -376,7 +357,7 @@ https://codepen.io/glosie/pen/GgqBXR
     height: 90%;
     margin: auto;
     border-radius: 50%;
-    background: #151515;
+    background: #fff;
 }
 
 @-webkit-keyframes load {
