@@ -6,6 +6,11 @@ body{
     user-select:none;
     cursor:default;
     -webkit-overflow-scrolling: touch;
+    background:#fff !important;
+}
+
+body, a{
+    color:#111 !important;
 }
 
 .portfolio-link{
@@ -36,27 +41,47 @@ body{
 
 /*---------------------------*/
 
+
+.portfolio-title{
+    text-align: center;
+    font-size:2.827em !important;
+    font-weight:200;
+}
+
+.portfolio-subtitle {
+    text-align: center;
+    font-size:1em;
+    font-weight:600;
+}
+
 .portfolio-content{
     display:none;
     width:100%;
     position:relative;
-    top:100px;
+    top:60px;
 }
 
 .portfolio-home-button{
     cursor:pointer;
     width:100%;
+    max-width:160px;
+    margin-left:auto;
+    margin-right:auto;
     text-align:center;
-    color:#6d6d6d;
+    color:#eee !important;
+    background:#111;
     font-size:1.414rem;
     transition: all 0.15s ease-out;
     display:block;
     font-weight:600;
     margin-bottom:4rem;
+    text-transform:uppercase;
+    letter-spacing:4px;
 }
 
 .portfolio-home-button:hover{
-    color:#111;
+    color:#fff !important;
+    background:#000;
 }
 
 .projects-container{
@@ -69,14 +94,8 @@ body{
 }
 
 
-.projects-container a p, .projects-container a h3{
-    color:#111;
-}
-
 .project{
     width: calc(100%-4rem);
-    background: rgba(255,255,255,1);
-    box-shadow: 0px 4px 12px rgba(127,127,127,1);
     margin:2em;
     margin-left:2.5em;
     margin-right:2.5em;
@@ -88,12 +107,12 @@ body{
 }
 
 .project:hover{
-    box-shadow: 0px 4px 24px rgba(95,95,95,1);
 }
 
 .project-title{
-    margin-bottom:2em;
+    margin-bottom:1em;
     font-size:1.414em;
+    font-weight:700;
 }
 
 .project-mockup{
@@ -106,13 +125,17 @@ body{
 
 .project-description{
     text-align:left;
-    margin-top:5em;
+    margin-top:3em;
     font-size: 0.707em;
 }
 
 .project-dev-icons i{
     font-size:6rem;
     color:#4a4a4a !important;
+}
+
+.project-technologies{
+    font-weight:600;
 }
 
 
