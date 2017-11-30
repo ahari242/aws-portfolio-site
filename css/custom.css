@@ -37,7 +37,7 @@ body, a {
 /*---------------------------*/
 .portfolio-title {
   text-align: center;
-  font-size: 1.998em !important;
+  font-size: 1.414em !important;
   font-weight: 200; }
 
 .portfolio-subtitle {
@@ -121,14 +121,13 @@ body, a {
   font-size: 1em;
   color: #000 !important; }
 
+/*main content on portfolio click*/
 @keyframes zoomingPast {
   0% { }
   100% {
     transform: translateY(-70vh) scaleY(0) scaleX(0.5); } }
 
-.zoomPast {
-  animation: zoomingPast 0.3s linear forwards; }
-
+/*bringing portfolio content to view*/
 @keyframes zoomingToward {
   0% {
     transform: scaleX(0.75) translateY(35vh);
@@ -137,11 +136,34 @@ body, a {
     transform: scaleX(1) translateY(0vh);
     opacity: 1; } }
 
+/*hiding portfolio content again*/
+@keyframes zoomingAway {
+  0% { }
+  100% {
+    transform: scaleX(0.5) translateY(-100vh);
+    opacity: 0; } }
+
+/*showing main content again*/
+@keyframes zoomingIn {
+  0% {
+    transform: translateY(100vh) scaleY(0) scaleX(0.5); }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1); } }
+
+.zoomPast {
+  animation: zoomingPast 0.3s linear forwards; }
+
 .zoomToward {
   animation: zoomingToward 0.3s linear forwards;
   display: block; }
 
-.zoomPast, .zoomToward {
+.zoomAway {
+  animation: zoomingAway 0.3s linear forwards; }
+
+.zoomIn {
+  animation: zoomingIn 0.3s linear forwards; }
+
+.zoomPast, .zoomToward, .zoomAway, .zoomIn {
   cursor: default;
   user-select: none; }
 

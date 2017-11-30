@@ -61,139 +61,136 @@ $black: #000000;
 }
 
 
-body{
+
+body {
     @include transition(1s background-color linear);
     @include user-select(none);
-    cursor:default;
+    cursor: default;
     -webkit-overflow-scrolling: touch;
-    background:#fff !important;
+    background: #fff !important;
 }
 
-body, a{
-    color:#111 !important;
+body, a {
+    color: #111 !important;
 }
 
-.portfolio-link{
-    cursor:pointer;
+.portfolio-link {
+    cursor: pointer;
 }
 
-.portfolio-link div{
+.portfolio-link div {
     @include transition(0.15s all linear);
     color: #008CEC;
 }
 
-.portfolio-link:hover div{
+.portfolio-link:hover div {
     color: #005FA0 !important;
 }
 
-.stackoverflow-link:after{
+.stackoverflow-link:after {
     background-color: #EC6000;
 }
 
-.contact-link:after{
+.contact-link:after {
     background-color: #5a5a5a;
 }
-
 /*---------------------------*/
-
-
-.portfolio-title{
+.portfolio-title {
     text-align: center;
-    font-size:1.998em !important;
-    font-weight:200;
+    font-size: 1.414em !important;
+    font-weight: 200;
 }
 
 .portfolio-subtitle {
     text-align: center;
-    font-size:1em;
-    font-weight:600;
+    font-size: 1em;
+    font-weight: 600;
 }
 
-.portfolio-content{
-    display:none;
-    width:100%;
-    position:relative;
-    top:60px;
+.portfolio-content {
+    display: none;
+    width: 100%;
+    position: relative;
+    top: 60px;
 }
 
-.portfolio-home-button{
-    cursor:pointer;
-    width:100%;
-    max-width:160px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-    color:#eee !important;
-    background:#111;
-    font-size:1.414rem;
+.portfolio-home-button {
+    cursor: pointer;
+    width: 100%;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #eee !important;
+    background: #111;
+    font-size: 1.414rem;
     @include transition(all 0.15s ease-out);
-    display:block;
-    font-weight:600;
-    margin-bottom:4rem;
-    text-transform:uppercase;
-    letter-spacing:4px;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
-.portfolio-home-button:hover{
-    color:#fff !important;
-    background:#000;
+.portfolio-home-button:hover {
+    color: #fff !important;
+    background: #000;
 }
 
-.projects-container{
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
+.projects-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     font-size: 2rem;
-    margin-bottom:12rem;
-    
+    margin-bottom: 12rem;
 }
 
 
-.project{
-    margin:2em;
-    margin-left:2.5em;
-    margin-right:2.5em;
-    padding:0.5em;
-    z-index:2;
-    max-width:640px;
+.project {
+    margin: 2em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    padding: 0.5em;
+    z-index: 2;
+    max-width: 640px;
     @include transition(0.15s all linear);
-    display:inline-block;
+    display: inline-block;
 }
 
 
 
-.project:hover{
+.project:hover {
 }
 
-.project-title{
-    margin-bottom:1em;
-    font-size:1.414em;
-    font-weight:700;
+.project-title {
+    margin-bottom: 1em;
+    font-size: 1.414em;
+    font-weight: 700;
 }
 
-.project-mockup{
-    width:250px;
-    margin-left:auto;
-    margin-right:auto;
-    display:inline-block;
-    max-width:100%;
+.project-mockup {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    max-width: 100%;
 }
 
-.project-description{
-    text-align:left;
-    margin-top:3em;
+.project-description {
+    text-align: left;
+    margin-top: 3em;
     font-size: 0.707em;
 }
 
-.project-dev-icons i{
-    font-size:6rem;
-    color:#4a4a4a !important;
+.project-dev-icons i {
+    font-size: 6rem;
+    color: #4a4a4a !important;
 }
 
-.project-technologies{
-    font-weight:600;
-    font-size:1em;
-    color:#000 !important;
+.project-technologies {
+    font-weight: 600;
+    font-size: 1em;
+    color: #000 !important;
 }
 
 
@@ -207,75 +204,112 @@ body, a{
 
 
 
-
+/*main content on portfolio click*/
 @keyframes zoomingPast {
     0% {
     }
 
 
-    100%{
-        transform:translateY(-70vh) scaleY(0) scaleX(0.5);
+    100% {
+        transform: translateY(-70vh) scaleY(0) scaleX(0.5);
     }
 }
 
 
-.zoomPast{
+
+
+
+/*bringing portfolio content to view*/
+@keyframes zoomingToward {
+    0% {
+        transform: scaleX(0.75) translateY(35vh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleX(1) translateY(0vh);
+        opacity: 1;
+    }
+}
+
+
+/*hiding portfolio content again*/
+@keyframes zoomingAway {
+    0% {
+    }
+
+    100% {
+        transform: scaleX(0.5) translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+
+
+/*showing main content again*/
+@keyframes zoomingIn {
+    0% {
+        transform: translateY(100vh) scaleY(0) scaleX(0.5);
+    }
+
+    100% {
+        transform: translateY(0) scaleY(1) scaleX(1);
+    }
+}
+
+
+
+
+
+
+.zoomPast {
     animation: zoomingPast 0.3s linear forwards;
 }
 
-
-
-@keyframes zoomingToward{
-    0% {
-        transform:scaleX(0.75) translateY(35vh);
-        opacity:0;
-        
-    }
-
-    100%{
-        transform:scaleX(1) translateY(0vh);
-        opacity:1;
-    }
-}
-
-
-.zoomToward{
+.zoomToward {
     animation: zoomingToward 0.3s linear forwards;
-    display:block;
+    display: block;
+}
+
+.zoomAway{
+    animation: zoomingAway 0.3s linear forwards;
+}
+
+.zoomIn{
+    animation: zoomingIn 0.3s linear forwards;
+}
+
+
+.zoomPast, .zoomToward, .zoomAway, .zoomIn {
+    cursor: default;
+    user-select: none;
 }
 
 
 
-.zoomPast, .zoomToward{
-    cursor:default;
-    user-select:none;
-}
 
 
 
-
-
-
-@media only screen and (min-width:768px){
-    .project-mockup{
-        position:relative;
-        right:0;
-        max-width:none;
+@media only screen and (min-width:768px) {
+    .project-mockup {
+        position: relative;
+        right: 0;
+        max-width: none;
     }
 }
 
-@media only screen and (max-width:767px){
-    .project-description{
-        width:75%;
-        margin-left:auto;
-        margin-right:auto;
-        text-align:center;
-        margin-top:2em;
-        margin-bottom:2em;
+@media only screen and (max-width:767px) {
+    .project-description {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 
-    .project{
-        margin-left:0.5em;
-        margin-right:0.5em;
+    .project {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
     }
 }
