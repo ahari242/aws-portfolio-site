@@ -16,7 +16,8 @@ body, a {
   color: #111 !important; }
 
 .portfolio-link {
-  cursor: pointer; }
+  cursor: pointer;
+  color: #008CEC !important; }
 
 .portfolio-link div {
   -webkit-transition: 0.15s all linear;
@@ -140,15 +141,17 @@ body, a {
 @keyframes zoomingAway {
   0% { }
   100% {
-    transform: scaleX(0.5) translateY(-100vh);
+    transform: scaleX(0.75) translateX(100vw);
     opacity: 0; } }
 
 /*showing main content again*/
 @keyframes zoomingIn {
   0% {
-    transform: translateY(100vh) scaleY(0) scaleX(0.5); }
+    transform: translateX(-100vw) scaleX(1.5);
+    opacity: 0; }
   100% {
-    transform: translateY(0) scaleY(1) scaleX(1); } }
+    transform: translateX(0) scaleX(1);
+    opacity: 1; } }
 
 .zoomPast {
   animation: zoomingPast 0.3s linear forwards; }

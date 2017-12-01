@@ -70,12 +70,13 @@ body {
     background: #fff !important;
 }
 
-body, a {
+body, a{
     color: #111 !important;
 }
 
 .portfolio-link {
     cursor: pointer;
+    color: #008CEC !important;
 }
 
 .portfolio-link div {
@@ -238,8 +239,9 @@ body, a {
     0% {
     }
 
+
     100% {
-        transform: scaleX(0.5) translateY(-100vh);
+        transform: scaleX(0.75) translateX(100vw);
         opacity: 0;
     }
 }
@@ -249,11 +251,13 @@ body, a {
 /*showing main content again*/
 @keyframes zoomingIn {
     0% {
-        transform: translateY(100vh) scaleY(0) scaleX(0.5);
+        transform: translateX(-100vw) scaleX(1.5);
+        opacity:0;
     }
 
     100% {
-        transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleX(1);
+        opacity:1;
     }
 }
 
