@@ -126,7 +126,7 @@ body, a {
 @keyframes zoomingPast {
   0% { }
   100% {
-    transform: translateY(-70vh) scaleY(0) scaleX(0.5); } }
+    transform: translateY(-70vh) scaleY(0) scaleX(0.75); } }
 
 /*bringing portfolio content to view*/
 @keyframes zoomingToward {
@@ -141,17 +141,15 @@ body, a {
 @keyframes zoomingAway {
   0% { }
   100% {
-    transform: scaleX(0.75) translateX(100vw);
+    transform: scaleX(0.9) translateX(100vw);
     opacity: 0; } }
 
 /*showing main content again*/
 @keyframes zoomingIn {
   0% {
-    transform: translateX(-100vw) scaleX(1.5);
-    opacity: 0; }
+    transform: translateX(-80vw) scaleX(0.9); }
   100% {
-    transform: translateX(0) scaleX(1);
-    opacity: 1; } }
+    transform: translateX(0) scaleX(1); } }
 
 .zoomPast {
   animation: zoomingPast 0.3s linear forwards; }
