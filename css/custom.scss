@@ -68,9 +68,10 @@ body {
     cursor: default;
     -webkit-overflow-scrolling: touch;
     background: #fff !important;
+    font-size:2.827em !important;
 }
 
-body, a{
+body, a {
     color: #111 !important;
 }
 
@@ -142,7 +143,7 @@ body, a{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 2rem;
+    font-size: 0.707em;
     margin-bottom: 12rem;
 }
 
@@ -194,6 +195,23 @@ body, a{
     color: #000 !important;
 }
 
+.technologies-list {
+    width: 100%;
+    color: $darkestgray;
+    visibility: visible;
+    opacity: 1;
+    line-height: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-weight: 800;
+    font-size:0.8535em;
+    margin-top:5px;
+}
+
+.technologies-list li {
+}
+
 
 
 
@@ -213,7 +231,8 @@ body, a{
 
 
     100% {
-        @include transform(translateY(-70vh) scaleY(0.8));
+        /*@include transform(translateY(-70vh) scaleY(0.8));*/
+        @include transform(scaleX(0.8) translateX(-100vw));
         opacity: 0.5;
     }
 }
@@ -225,12 +244,14 @@ body, a{
 /*bringing portfolio content to view*/
 @keyframes zoomingToward {
     0% {
-        @include transform(scaleX(0.8) translateY(35vh));
+        /*@include transform(scaleX(0.8) translateY(35vh));*/
+        @include transform(translateX(80vw) scaleX(0.8));
         opacity: 0;
     }
 
     100% {
-        @include transform(scaleX(1) translateY(0vh));
+        /*@include transform(scaleX(1) translateY(0vh));*/
+        @include transform(translateX(0) scaleX(1));
         opacity: 1;
     }
 }
@@ -267,7 +288,6 @@ body, a{
 
 .zoomPast {
     @include animation(zoomingPast 0.3s linear forwards);
-    
 }
 
 .zoomToward {
@@ -275,11 +295,11 @@ body, a{
     display: block;
 }
 
-.zoomAway{
-   @include animation(zoomingAway 0.3s linear forwards);
+.zoomAway {
+    @include animation(zoomingAway 0.3s linear forwards);
 }
 
-.zoomIn{
+.zoomIn {
     @include animation(zoomingIn 0.3s linear forwards);
 }
 
@@ -315,5 +335,9 @@ body, a{
     .project {
         margin-left: 0.5em;
         margin-right: 0.5em;
+    }
+
+    .technologies-list {
+        justify-content: center;
     }
 }
