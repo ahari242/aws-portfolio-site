@@ -63,7 +63,6 @@ $black: #000000;
 
 
 body {
-    @include transition(1s background-color linear);
     @include user-select(none);
     cursor: default;
     -webkit-overflow-scrolling: touch;
@@ -73,6 +72,7 @@ body {
 
 body, a {
     color: #111 !important;
+    transition:0.15s all linear !important;
 }
 
 .portfolio-link {
@@ -204,13 +204,33 @@ body, a {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    font-weight: 800;
-    font-size:0.8535em;
-    margin-top:5px;
+    font-weight: 500;
+    font-size:0.707em;
+    margin-top:10px;
 }
 
 .technologies-list li {
+    border:solid $darkestgray 1px;
+    background:$darkestgray;
+    color:$white;
+    padding:3px 8px;
+    margin:2px 0;
+    margin-right:4px;
+    margin-left:0;
+    letter-spacing:0.5px;
 }
+
+/*.technologies-list li::before{
+    content:"";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 0;
+    border-color: $darkergray transparent transparent transparent;
+    position:absolute;
+    top:0;
+    left:0;
+}*/
 
 
 
