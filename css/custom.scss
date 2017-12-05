@@ -63,8 +63,6 @@ $black: #000000;
 
 
 body {
-    @include user-select(none);
-    cursor: default;
     -webkit-overflow-scrolling: touch;
     background: #fff !important;
 }
@@ -336,8 +334,6 @@ body, a {
 
 
 .zoomPast, .zoomToward, .zoomAway, .zoomIn {
-    cursor: default;
-    @include user-select(none);
 }
 
 

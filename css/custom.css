@@ -1,10 +1,4 @@
 ﻿body {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
   -webkit-overflow-scrolling: touch;
   background: #fff !important; }
 
@@ -237,14 +231,6 @@ body, a {
   -moz-animation: zoomingIn 0.3s linear forwards;
   -o-animation: zoomingIn 0.3s linear forwards;
   animation: zoomingIn 0.3s linear forwards; }
-
-.zoomPast, .zoomToward, .zoomAway, .zoomIn {
-  cursor: default;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
 
 @media only screen and (min-width: 768px) {
   .project-mockup {
