@@ -483,7 +483,7 @@ https://codepen.io/glosie/pen/GgqBXR
 /* 8.1 Small Devices, Tablets (>=768px)
 -------------------------------------------------------------- */
 @media only screen and (min-width : 768px) {
-    body {
+    .main-content {
         font-size: 22px;
         line-height: 48px;
     }
@@ -502,7 +502,7 @@ https://codepen.io/glosie/pen/GgqBXR
 /* 8.3 Large Devices, Desktops (>=1200px)
 -------------------------------------------------------------- */
 @media only screen and (min-width : 1200px) {
-    body {
+    .main-content {
         font-size: 26px;
         line-height: 48px;
     }
@@ -511,7 +511,7 @@ https://codepen.io/glosie/pen/GgqBXR
 /* 8.4 Wide Screens, Desktops (>=1824px)
 -------------------------------------------------------------- */
 @media only screen and (min-width : 1824px) {
-    body {
+    .main-content {
         font-size: 32px;
         line-height: 60px;
     }
