@@ -60,6 +60,19 @@ $black: #000000;
     box-sizing: $box-sizing;
 }
 
+@mixin backface-visibility($backface-visibility) {
+    -webkit-backface-visibility:$backface-visibility;
+    backface-visibility:$backface-visibility;
+    -moz-backface-visibility:$backface-visibility;
+}
+
+@mixin perspective($perspective) {
+    -webkit-perspective:$perspective;
+    perspective:$perspective;
+    -moz-perspective:$perspective;
+    -ms-perspective:$perspective;
+}
+
 
 
 body {
@@ -255,13 +268,14 @@ body, a {
 /*main content on portfolio click*/
 @keyframes zoomingPast {
     0% {
+        @include transform(translateZ(0));
     }
 
 
 
     100% {
         /*@include transform(translateY(-70vh) scaleY(0.8));*/
-        @include transform(scaleX(0.8) translateX(-100vw));
+        @include transform(scaleX(0.8) translateX(-100vw) translateZ(0));
         opacity: 0.5;
     }
 }
@@ -274,13 +288,13 @@ body, a {
 @keyframes zoomingToward {
     0% {
         /*@include transform(scaleX(0.8) translateY(35vh));*/
-        @include transform(translateX(80vw) scaleX(0.8));
+        @include transform(translateX(80vw) scaleX(0.8) translateZ(0));
         opacity: 0;
     }
 
     100% {
         /*@include transform(scaleX(1) translateY(0vh));*/
-        @include transform(translateX(0) scaleX(1));
+        @include transform(translateX(0) scaleX(1) translateZ(0));
         opacity: 1;
     }
 }
@@ -289,10 +303,12 @@ body, a {
 /*hiding portfolio content again*/
 @keyframes zoomingAway {
     0% {
+        
+        @include transform(translateZ(0))
     }
 
     100% {
-        @include transform(scaleX(0.8) translateX(100vw));
+        @include transform(scaleX(0.8) translateX(100vw) translateZ(0));
         opacity: 0;
     }
 }
@@ -302,11 +318,11 @@ body, a {
 /*showing main content again*/
 @keyframes zoomingIn {
     0% {
-        @include transform(translateX(-80vw) scaleX(0.8));
+        @include transform(translateX(-80vw) scaleX(0.8) translateZ(0));
     }
 
     100% {
-        @include transform(translateX(0) scaleX(1));
+        @include transform(translateX(0) scaleX(1) translateZ(0));
     }
 }
 
@@ -316,24 +332,27 @@ body, a {
 
 
 .zoomPast {
-    @include animation(zoomingPast 0.3s linear forwards);
+    @include animation(zoomingPast 0.3s ease-in-out forwards);
+    
 }
 
 .zoomToward {
-    @include animation(zoomingToward 0.3s linear forwards);
+    @include animation(zoomingToward 0.3s ease-in-out forwards);
     display: block;
 }
 
 .zoomAway {
-    @include animation(zoomingAway 0.3s linear forwards);
+    @include animation(zoomingAway 0.3s ease-in-out forwards);
 }
 
 .zoomIn {
-    @include animation(zoomingIn 0.3s linear forwards);
+    @include animation(zoomingIn 0.3s ease-in-out forwards);
 }
 
 
 .zoomPast, .zoomToward, .zoomAway, .zoomIn {
+    @include backface-visibility(hidden);
+    @include perspective(1000);
 }
 
 
